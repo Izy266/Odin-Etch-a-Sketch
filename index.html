@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="code.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Etch-a-Sketch</title>
+</head>
+
+<body>
+    <div class="sliderContainer">
+        <input type="range" min="1" max="60" value="50" class="slider" id="myRange">
+    </div>
+    <div class="colorPicker">
+        <input onclick = "clearModes()" type="color" id="chooseColor">
+        <button onclick="clearModes(); colorful = true" type="button" id="rainbow">Rainbow</button>
+        <button onclick="clearModes(); erase = true" type = "button" id = "eraser">Eraser</button>
+        <button onclick = "clearBoard()">Clear</button>
+    </div>
+</body>
+
+</html>
