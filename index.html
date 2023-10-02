@@ -10,15 +10,19 @@
 </head>
 
 <body>
-    <div class="sliderContainer">
-        <input type="range" min="1" max="60" value="50" class="slider" id="myRange">
-    </div>
-    <div class="colorPicker">
-        <input onclick="clearModes()" type="color" id="chooseColor">
-        <button onclick="clearModes(); colorful = true" type="button" id="rainbow">Rainbow</button>
-        <button onclick="clearModes(); erase = true" type="button" id="eraser">Eraser</button>
-        <button onclick="clearModes(); shade = true" type="button" id="shader">Shader</button>
-        <button onclick="clearBoard()">Clear</button>
+    <div class="control">
+        <div class="sliderContainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <text></text>
+        </div>
+        <div class="colorPicker">
+            <input onclick="clearModes()" type="color" id="chooseColor">
+            <button onclick="clearModes(); colorful = true" type="button" id="rainbow">Rainbow</button>
+            <button onclick="clearModes(); erase = true" type="button" id="eraser">Eraser</button>
+            <button onclick="clearModes(); shade = true" type="button" id="shader">Shader</button>
+            <button onclick="clearModes(); tint = true" type="button" id="tint">Tint</button>
+            <button onclick="clearBoard()">Clear</button>
+        </div>
     </div>
 </body>
 
