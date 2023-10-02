@@ -7,22 +7,34 @@
     <script src="code.js" defer></script>
     <link rel="stylesheet" href="./style.css">
     <title>Etch-a-Sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Young+Serif&display=swap" rel="stylesheet">
+    
 </head>
 
 <body>
-    <div class="control">
-        <div class="sliderContainer">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-            <text></text>
+    <h1 class="title">Etch-A-Sketch</h1>
+    <div class="sketchUI">
+        
+        <div class="control">
+            <div class="colorSettings">
+                <input onclick="clearModes()" type="color" id="chooseColor">
+                <button onclick="clearModes(); colorful = true" type="button" id="rainbow">
+                    <span id="r">R</span><span id="a">a</span><span id="i">i</span><span id="n">n</span><span
+                        id="b">b</span><span id="o">o</span><span id="w">w</span>
+                </button>
+                <button onclick="clearModes(); erase = true" type="button" id="eraser">Eraser</button>
+                <button onclick="clearModes(); shade = true" type="button" id="shader">Shader</button>
+                <button onclick="clearModes(); tint = true" type="button" id="tint">Tint</button>
+                <button onclick="clearBoard()" type="button" id="clear">Clear</button>
+            </div>
+            <div class="sliderContainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <text></text>
+            </div>
         </div>
-        <div class="colorPicker">
-            <input onclick="clearModes()" type="color" id="chooseColor">
-            <button onclick="clearModes(); colorful = true" type="button" id="rainbow">Rainbow</button>
-            <button onclick="clearModes(); erase = true" type="button" id="eraser">Eraser</button>
-            <button onclick="clearModes(); shade = true" type="button" id="shader">Shader</button>
-            <button onclick="clearModes(); tint = true" type="button" id="tint">Tint</button>
-            <button onclick="clearBoard()">Clear</button>
-        </div>
+        <div class="sketchContainer"></div>
     </div>
 </body>
 

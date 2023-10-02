@@ -1,5 +1,6 @@
 let boardSize = document.querySelector(".slider");
 let sliderText = document.querySelector(".sliderContainer text");
+let sketch = document.querySelector(".sketchContainer");
 sliderText.textContent = boardSize.value;
 
 let colorful = false;
@@ -35,7 +36,7 @@ function drawBoard(size) {
             square.className = "square";
             row.appendChild(square);
         }
-        document.body.appendChild(board);
+        sketch.appendChild(board);
     }
 }
 

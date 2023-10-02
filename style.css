@@ -1,15 +1,33 @@
-body{
-    display:flex;
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(226, 223, 223);
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin-left: 150px;
+    margin-top: 50px;
+    font-family: "Young Serif", serif, arial, helvetica;
+    font-size: 48px;
+    color: rgb(165, 59, 59);
 }
 
 #board {
-    width: 600px; 
-    height: 600px; 
+    width: 600px;
+    height: 600px;
     margin: 50px;
-    border-left: 1px solid black; 
+    border-left: 1px solid black;
     border-bottom: 1px solid black;
-    display:flex;
+    display: flex;
     flex-direction: column;
+    box-shadow: 0.2em 0 1em rgb(165, 146, 146);
+}
+
+.sketchUI {
+    display:flex;
+    justify-content: center;
 }
 
 .row {
@@ -18,25 +36,121 @@ body{
 }
 
 .square {
-    border-right: 1px solid black; 
-    border-top: 1px solid black; 
-    flex:1; 
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    flex: 1;
     user-select: none;
 }
 
 .control {
     margin: 50px 0;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }
 
-.colorPicker {
-    display:flex;
+.colorSettings {
+    width: 130px;
+    display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
 .sliderContainer {
     display: flex;
+    flex-direction: column;
     margin: 10px 0;
+    align-items: center;
+}
+
+.slider {
+    width: 130px;
+}
+
+#chooseColor {
+    width: 130px;
+    border: 1px solid black;
+    box-shadow: 0.1em 0 .1em rgb(165, 146, 146);
+    border-radius: 4px;
+    padding: 0;
+
+}
+
+button {
+    height: 30px;
+    box-shadow: 3px 2px 12px 1px rgba(0, 0, 0, 0.24);
+    font-family: Nunito;
+    font-weight: 400;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 2px 1px 10px 0.5px rgba(0, 0, 0, 0.24);
+}
+
+
+#rainbow:hover {
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, red);
+    animation: slidebg 2s linear infinite;
+}
+
+#eraser:hover {
+    filter: blur(10px);
+    transition: all 2s;
+}
+
+#shader:hover {
+    background: linear-gradient(#0000, rgb(0 0 0/40%)) top/100% 800%;
+    background-color: rgb(35, 43, 44);
+    transition: 2s;
+}
+
+#tint:hover {
+    background-image: linear-gradient(to right, rgb(35, 43, 44), white);
+    animation: slidebg 5s linear;
+}
+
+#clear:hover {
+    color: transparent;
+    transition: 1s;
+}
+
+@keyframes slidebg {
+    to {
+        background-position: 13vw;
+    }
+}
+
+#r {
+    color: red;
+}
+
+#a {
+    color: orange;
+}
+
+#i {
+    color: rgb(189, 189, 79);
+}
+
+#n {
+    color: green;
+}
+
+#b {
+    color: blue;
+}
+
+#o {
+    color: indigo;
+}
+
+#w {
+    color: violet;
 }
