@@ -47,7 +47,7 @@ function drawBehaviour(square) {
         ${Math.floor(Math.random() * 255)}
         )`;
     } else if (erase) {
-        square.style.background = board.style.background;
+        square.style.background = "rgb(255, 255, 255)";
         square.setAttribute("shadeVal", "0");
         square.setAttribute("tintVal", "0");
     } else if (shade) {
